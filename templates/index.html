@@ -1,0 +1,48 @@
+{% extends "base.html" %} {% block nav_bar %}
+<div class="nav-bar">
+  <div class="nav-tag">
+    <a id="myLink" href=""></a>
+    <i class="fa-solid fa-user fa-lg"></i>
+    <p>Portfolio</p>
+  </div>
+</div>
+<script>
+  // Get the current domain
+  const domain = window.location.hostname;
+
+  // Remove "docs" from the domain
+  const newDomain = domain.replace("docs.", "");
+
+  // Set the link URL
+  const link = document.getElementById("myLink");
+  link.href = `https://${newDomain}`;
+</script>
+{% endblock %} {% block content %}
+
+<h1 class="heading">
+  <i class="fa-solid fa-book"></i>
+  <span> {{ section.title }} </span>
+</h1>
+
+<br />
+<div class="block-data">
+  {% for page in section.pages %}
+
+  <div class="doc">
+    <h4>
+      <a href="{{ page.permalink | safe }}">{{ page.title }}</a>
+
+      <div class="date">
+        Updated:
+        <div style="color: var(--green); padding-left: 0.3rem">
+          {{ page.date }}
+        </div>
+      </div>
+    </h4>
+    <p>{{ page.description | safe }}</p>
+  </div>
+
+  {% endfor %}
+</div>
+
+{% endblock content %}
