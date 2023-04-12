@@ -6,17 +6,6 @@
     <p>Portfolio</p>
   </div>
 </div>
-<script>
-  // Get the current domain
-  const domain = window.location.hostname;
-
-  // Remove "docs" from the domain
-  const newDomain = domain.replace("docs.", "");
-
-  // Set the link URL
-  const link = document.getElementById("myLink");
-  link.href = `https://${newDomain}`;
-</script>
 {% endblock %} {% block content %}
 
 <h1 class="heading">
