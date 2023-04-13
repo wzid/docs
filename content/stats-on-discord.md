@@ -4,7 +4,8 @@ date = 2023-03-02
 description = "Documentation for stats-on-discord plugin"
 
 [extra]
-github = "https://github.com/wzid/stats-on-discord"
+github = "wzid/stats-on-discord"
+actual_date =  "March 2nd 2023"
 +++
 
 # Table of Contents
@@ -34,7 +35,7 @@ github = "https://github.com/wzid/stats-on-discord"
 ## Creating the Bot
 Before we can edit the configuration file we need to create a Discord bot
 
-> Create an application at [https://discord.com/developers/applications](https://discord.com/developers/applications) by pressing `New Application`
+> Create an application at [discord.com/developers/applications](https://discord.com/developers/applications) by pressing `New Application`
 
 Select the `Bot` tab and then press the `Add Bot` button 
 

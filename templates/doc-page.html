@@ -16,15 +16,12 @@
 
 {% block content %}
 <h1 class="title">
-  {{ page.title }} {% if page.extra.github %}
-  <div class="date">
-    <a href="{{ page.extra.github }}">{{ page.extra.github }}</a>
-  </div>
-  {% endif %}
+  <a href="https://github.com/{{ page.extra.github }}">
+    {{ page.title }} 
+  </a>
 
   <div class="date">
-    Updated:
-    <div style="color: var(--green); padding-left: 0.3rem">{{ page.date }}</div>
+    {{ page.extra.actual_date }}
   </div>
 </h1>
 <br />

@@ -1,7 +1,7 @@
 {% extends "base.html" %} {% block nav_bar %}
 <div class="nav-bar">
   <div class="nav-tag">
-    <a id="myLink" href=""></a>
+    <a href="https://cameron.rs"></a>
     <i class="fa-solid fa-user fa-lg"></i>
     <p>Portfolio</p>
   </div>
@@ -22,12 +22,10 @@
       <a href="{{ page.permalink | safe }}">{{ page.title }}</a>
 
       <div class="date">
-        Updated:
-        <div style="color: var(--green); padding-left: 0.3rem">
-          {{ page.date }}
-        </div>
+          {{ page.extra.actual_date }}
       </div>
     </h4>
+
     <p>{{ page.description | safe }}</p>
   </div>
 

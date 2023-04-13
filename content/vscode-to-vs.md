@@ -4,7 +4,8 @@ date = 2023-04-03
 description = "Documentation for the vscode-to-vs utility command"
 
 [extra]
-github = "https://github.com/wzid/vscode-to-vs"
+github = "wzid/vscode-to-vs"
+actual_date =  "April 4th 2023"
 +++
 
 This command allows you to create the files needed for a Visual Studio C++ project. Mostly for operating systems that do not support Visual Studio C++ development.
@@ -23,15 +24,15 @@ This command allows you to create the files needed for a Visual Studio C++ proje
 
 </div>
 
-Run `brew install wzid/tap/vscode-to-vs`
+- Run `brew install wzid/tap/vscode-to-vs`
 
 # Usage
 
-Since the command was added to your **PATH**, you can now use the command:
-
-`vscode-to-vs [ProjectName] ["File Path"]`
+The command can be used like so: `vscode-to-vs [ProjectName] [File Path]`
 
 The file path should be the path to the folder that holds all the VS Code C++ files
+
+> Make sure to enclose either of the arguments with double quotation marks `"` if they contain spaces
 
 <br>
 
