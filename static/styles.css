@@ -6,16 +6,15 @@
 :root {
   --blue: #6eb0a3;
   --green: #a9b665;
-  --pink: #ffa8ce;
+  --pink: #e86a92;
   --dark-pink: #de5490;
-  --highlight: #615856;
-  --text-color: #f9f5d7;
-  --fake-opacity: #8b8b7c;
-  --background: #1d2021;
-  --nav: #4a5153;
-  --box: #3b4142;
-  --box-bright: #565f61;
-  --regular: -apple-system, BlinkMacSystemFont, Inter;
+  --highlight: #696369;
+  --text-color: #f7f9f7;
+  --fake-opacity: #797279;
+  --background: #292729;
+  --background-lighter: #3a3639;
+  --background-lightest: #4A454A;
+  --regular: -apple-system, BlinkMacSystemFont, segoe ui, Inter;
   --code: SFMono-Regular, Consolas, Menlo, monospace;
 }
 
@@ -29,49 +28,28 @@
 }
 
 .nav-bar {
-  font-size: 0.9rem;
   display: flex;
+  margin-top: .75rem;
   justify-content: end;
-  padding-bottom: 1.5rem;
+}
+
+.nav-bar > *:not(:first-child) {
+  margin-left: 2rem;
 }
 
 .nav-tag {
-  position: relative;
-  padding: 0.5rem 0.75rem 0.5rem 0.75rem;
-  background-color: var(--nav);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: 0.2s;
-  transition-timing-function: ease-out;
-}
-
-.nav-tag a {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  text-decoration: none; /* No underlines on the link */
-  z-index: 10; /* Places the link above everything else in the div */
-  opacity: 0; /* Fix to make div clickable in IE */
-}
-
-.nav-tag:first-child {
-  border-bottom-left-radius: 0.75rem;
-}
-
-.nav-tag:last-child {
-  border-bottom-right-radius: 0.75rem;
+  padding: .5rem;
+  border-radius: .3rem;
+  color: var(--text-color);
+  background-color: var(--background-lighter);
+  border: 1px solid var(--background);
 }
 
 .nav-tag:hover {
-  cursor: pointer;
-  background-color: #6eb0a3;
-}
-
-.nav-tag i {
-  padding-right: 0.5rem;
+  background-color: #3a3639aa;
+  border: 1px solid var(--background-lightest);
+  opacity: 1;
+  text-decoration: none;
 }
 
 .content {
@@ -83,9 +61,7 @@
   display: flex;
   padding-bottom: 0.25rem;
   flex-direction: row;
-  align-items: center;
-  color: var(--green);
-  border-bottom: 1px solid;
+  align-items: end;
   font-size: 2.15rem;
 }
 
@@ -101,15 +77,13 @@
   display: flex;
   padding-bottom: 0.25rem;
   flex-direction: row;
-  justify-content: space-between;
   align-items: end;
-  color: var(--green);
-  border-bottom: 1px solid;
   font-size: 2.15rem;
 }
 
 .title a {
-  color: var(--green);
+  color: var(--text-color);
+  border-bottom: 2px dashed;
 }
 
 .title a:hover {
@@ -118,8 +92,8 @@
 
 .date {
   display: inherit;
-  color: var(--green);
   font-weight: normal;
+  color: var(--fake-opacity);
   font-size: 1rem;
 }
 
@@ -129,7 +103,7 @@ p {
 
 a {
   text-decoration: none;
-  color: var(--blue);
+  color: var(--pink);
   transition: 0.15s;
 }
 
@@ -201,16 +175,16 @@ p code, li code {
   font-family: var(--code);
   border-radius: 0.3rem;
   padding: 0.15rem 0.2rem 0.15rem 0.2rem;
-  border: 1px solid #687275;
+  border: 1px solid var(--fake-opacity);
   background-color: var(--box);
 }
 
 blockquote {
   font-size: 0.9rem;
   display: inline-block;
-  background-color: var(--box);
+  background-color: var(--background-lighter);
   margin: 0.5rem 0 0.5rem;
-  border: 1.5px solid #687275;
+  border: 1.5px solid var(--fake-opacity);
   border-radius: 0.4rem;
   padding: 0.25rem 0.5rem 0.25rem 0.5rem;
 }
@@ -276,7 +250,7 @@ pre table {
 table {
   margin: 1rem 0 1rem;
   border-radius: 0.4rem;
-  border: 1.5px solid #687275;
+  border: 1.5px solid var(--fake-opacity);
   border-spacing: 0;
   empty-cells: show;
 }
@@ -302,16 +276,16 @@ table th {
 }
 
 table tr:nth-child(2n + 1) {
-  background-color: var(--box);
+  background-color: var(--background-lighter);
 }
 
 table tr:nth-child(2n) {
   /* */
-  background-color: var(--box-bright);
+  background-color: var(--background-lightest);
 }
 
 table thead {
-  background-color: var(--box);
+  background-color: var(--background-lighter);
   text-align: left;
   vertical-align: bottom;
 }
@@ -334,7 +308,7 @@ body {
 .doc {
   padding: .25rem .5rem .5rem .25rem;
   margin-bottom: 1rem;
-  border-bottom: 1px solid var(--box);
+  border-bottom: 1px dashed var(--fake-opacity);
 }
 
 .doc h4 {
@@ -357,7 +331,6 @@ body {
 }
 
 .doc p {
-  font-size: 0.9rem;
   line-height: 1.25rem;
   color: var(--fake-opacity);
 }
@@ -386,6 +359,7 @@ body {
 }
 
 #footer > a {
+  color: var(--text-color);
   position: relative;
   display: inline-block;
   padding: 0 1rem;
