@@ -25,8 +25,17 @@
   <div id="horizontal-content">
     
     <div id="vertical-content">
-      {% block nav_bar %}
-      {% endblock %}
+      <div class="nav-bar">
+        <a class="heading-link" href="https://cameron.rs">
+          <strong>cameron.rs</strong>
+        </a>
+        <div class="links">
+          {% for menu_link in config.extra.menu_links %}
+            {% set link_url = menu_link.url | replace(from="$BASE_URL", to=config.base_url) %}
+            <a {% if current_url and current_url == link_url %}class="active"{% endif %} href="{{ link_url }}">{{menu_link.name}}</a>
+          {% endfor %}
+        </div>
+      </div>
 
       <section class="section" id="main">
         <div class="container">
@@ -48,7 +57,7 @@
         <!--
           <span class="link-separator">&middot;</span>
           --->
-        <a href="mailto:cameronkauffman@outlook.com" title="Email">
+        <a href="mailto:me@cameron.rs" title="Email">
           <i class="fa-solid fa-envelope fa-2xl"></i>
         </a>
         {% endblock footer %}

@@ -1,8 +1,11 @@
 {% extends "base.html" %}
 {% block nav_bar %}
 <div class="nav-bar">
-  <a class ="nav-tag" href="https://cameron.rs">Portfolio</a>
+  <a class="heading-link" href="https://cameron.rs">
+    <strong>cameron.rs</strong>
+  </a>
   <a class ="nav-tag" href="{{ get_url(path='@/_index.md') }}">Documentation</a>
+  <a class ="nav-tag" href="https://blog.cameron.rs">Blog</a>
 </div>
 {% endblock %}
 

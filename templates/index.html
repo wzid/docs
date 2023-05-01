@@ -1,13 +1,7 @@
-{% extends "base.html" %} {% block nav_bar %}
-<div class="nav-bar">
-    <a class ="nav-tag" href="https://cameron.rs">Portfolio</a>
-</div>
-{% endblock %} {% block content %}
+{% extends "base.html" %}
 
-<h1 class="heading">
-  <i class="fa-solid fa-book"></i>
-  <span> {{ section.title }} </span>
-</h1>
+{% block content %}
+<h1 class="heading"> {{ section.title }} </h1>
 
 <br />
 <div class="block-data">
@@ -17,9 +11,7 @@
     <h4>
       <a href="{{ page.permalink | safe }}">{{ page.title }}</a>
 
-      <div class="date">
-          {{ page.extra.actual_date }}
-      </div>
+      <div class="date">{{ page.extra.actual_date }}</div>
     </h4>
 
     <p>{{ page.description | safe }}</p>

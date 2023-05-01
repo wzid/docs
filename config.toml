@@ -14,3 +14,7 @@ highlight_code = true
 
 [extra]
 # Put all your custom variables here
+menu_links = [
+    { url = "https://blog.cameron.rs", name = "Blog" },
+    { url = "$BASE_URL/", name = "Documentation" },
+]
