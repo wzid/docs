@@ -237,13 +237,6 @@ pre {
   overflow: auto;
 }
 
-pre mark {
-  /* If you want your highlights to take the full width. */
-  display: block;
-  /* The default background colour of a mark is bright yellow */
-  background-color: red;
-}
-
 table {
   margin-top: 2rem;
   margin-bottom: 2rem;
