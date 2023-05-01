@@ -31,6 +31,11 @@
   background: var(--highlight);
 }
 
+nav {
+  width: 60%;
+  align-self: center;
+}
+
 .nav-bar {
   padding-bottom: 2rem;
   line-height: 2rem;
@@ -317,33 +322,54 @@ body {
   flex-direction: column;
 }
 
+#main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.container {
+  width: 60%;
+  padding: 1rem;
+}
+
 #footer {
+  background-color: var(--background-lightest);
   margin-top: auto;
-  padding-top: 3rem;
   display: flex;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
-  padding-bottom: 2rem;
+  padding-top: 2.5rem;
+  padding-bottom: 0.5rem;
   position: relative;
 }
 
-#footer > a {
+#footer p {
+  font-size: 1rem;
+}
+
+#footer .icons {
+  padding-bottom: 1rem;
+}
+
+#footer .icons > a {
   color: var(--text-color);
   position: relative;
   display: inline-block;
   padding: 0 1rem;
 }
 
-#footer > a:hover {
+#footer .icons > a:hover {
   opacity: 1;
 }
 
-#footer a::before {
+#footer .icons a::before {
   transition: 0.2s;
   opacity: 0;
   content: attr(title);
   position: absolute;
-  top: -1.5rem;
+  top: -1.4rem;
   left: 50%;
   transform: translateX(-50%);
   color: #fff;
@@ -351,13 +377,9 @@ body {
   white-space: nowrap;
 }
 
-#footer a:hover:before {
+#footer .icons a:hover:before {
   opacity: 1;
   top: -2rem;
-}
-
-#footer > * {
-  padding: 0 1rem 0 1rem;
 }
 
 .link-separator {
@@ -368,6 +390,18 @@ body {
 @media (max-width: 1080px) {
   .title > * {
     line-height: 1.6rem;
+  }
+
+  nav {
+    width: 90%;
+  }
+
+  .links > *:not(:first-child) {
+    margin-left: 1rem;
+  }
+
+  .container {
+    width: 100%;
   }
 
   .title {
@@ -404,11 +438,5 @@ body {
   }
   .doc h4 {
     font-size: 1rem;
-  }
-}
-
-@media (min-width: 1080px) {
-  #horizontal-content {
-    width: 60%;
   }
 }
