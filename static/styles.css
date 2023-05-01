@@ -271,6 +271,7 @@ table tr:nth-child(2n) {
 
 body {
   width: 100%;
+  line-height: 1.4rem;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -341,12 +342,15 @@ body {
   flex-direction: column;
   align-items: center;
   padding-top: 2.5rem;
-  padding-bottom: 0.5rem;
+  padding-bottom: 1.5rem;
   position: relative;
 }
 
 #footer p {
+  line-height: 1.5rem;
   font-size: 1rem;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 #footer .icons {
@@ -382,9 +386,8 @@ body {
   top: -2rem;
 }
 
-.link-separator {
-  padding-bottom: 0.25rem;
-  font-size: 2rem;
+#footer > *:not(:first-child) {
+  justify-content: end;
 }
 
 @media (max-width: 1080px) {
